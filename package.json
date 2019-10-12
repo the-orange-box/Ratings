@@ -26,7 +26,8 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start": "live-server",
-    "server-start": "nodemon ./server/index.js"
+    "server-start": "nodemon ./server/index.js",
+    "seed-database": "node seeder.js"
   },
   "repository": {
     "type": "git",

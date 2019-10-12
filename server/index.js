@@ -1,7 +1,11 @@
 // import express framework
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+var Ratings = require('../seed.js');
+mongoose.connect('mongodb://localhost:27017/ratings',{ useNewUrlParser: true, useUnifiedTopology: true });
+
 
 // Set PORT# to listen on
 const PORT = 3000;
@@ -16,6 +20,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //Test GET handler
 app.get('/', (req,res) => {res.sendStatus(418)});
+
+var getStuff = () => {
+    db.find()
+}
+
+app.get('/ratings', (req,res) => {mongoose.connection.getStuff()});
+
 
 //Get test movie data
 app.get('/test', function (req, res) {

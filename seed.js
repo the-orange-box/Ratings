@@ -1,6 +1,7 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var ratingSchema = new mongoose.Schema ({
+var ratingSchema = new Schema({
     placeId: Number,
     hostId: Number,
     hostName: String,
@@ -20,6 +21,7 @@ var ratingSchema = new mongoose.Schema ({
         userName: String,
         userIcon: String,
         messageText: String,
+        responded: Boolean,
         responseText: String,
         responseTime: String,
         postDate: String,
@@ -35,4 +37,4 @@ var ratingSchema = new mongoose.Schema ({
     }],
   });
 
-  module.exports = mongoose.model('ratings', ratingSchema)
+  module.exports = mongoose.model('ratings', ratingSchema);

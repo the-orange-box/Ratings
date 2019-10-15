@@ -20,11 +20,15 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //Test GET handler
 app.get('/', (req,res) => {res.sendStatus(418)});
 
-var getStuff = () => {
-    db.find()
+function getStuff(cb) {
+    Ratings.find({}).exec(cb);
 }
 
-app.get('/ratings', (req,res) => {mongoose.connection.getStuff()});
+app.get('/ratings', (req,res) => {
+    getStuff((err, result)=>{
+        res.send(result);
+    });
+});
 
 
 //Get test movie data

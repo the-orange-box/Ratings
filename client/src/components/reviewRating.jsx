@@ -7,12 +7,6 @@ class ReviewRatings extends React.Component {
         this.state = {
         }
     }
-    // communication: this.props.ratingAverages.Communication,
-    // accuracy: this.props.ratingAverages.Accuracy,
-    // location: this.props.ratingAverages.Location,
-    // checkin: this.props.ratingAverages.Checkin,
-    // value: this.props.ratingAverages.Value,
-    // Cleanliness: this.props.ratingAverages.Cleanliness
 
     render() {
         console.log("Rendering ReviewsRatings", this.props.ratingAverages)

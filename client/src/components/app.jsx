@@ -7,49 +7,54 @@ class App extends React.Component {
     super(props)
     this.state = {
       hello: "",
-      reviews: []
+      fulldata: [],
+      reviews: [],
+      ratingAverages: {
+        communication: 0.1,
+        accuracy: 0.1,
+        location: 0.1,
+        checkin: 0.1,
+        value: 0.1,
+        Cleanliness: 0.1
+      }
     }
     this.updateRender = this.updateRender.bind(this)
     this.getHello = this.getHello.bind(this)
   }
   updateRender(update) {
-    this.setState({             
-      reviews: update     //Remember res stores the 'send' data in a data obj
-    })
     console.log("Updating Render ",this.state)
+    this.setState({
+      fulldata: update[0],     //Remember res stores the 'send' data in a data obj
+      ratingAverages: update[0].ratingAverages,
+      reviews: update[0].reviews
+    })
   }
-  
+
   getHello(){
+    var self = this;
     console.log("Getting Reviews")
     var data = [];
-    Axios.get('/ratings')
+    // Axios.get('/ratings') //Gets 'real' data from database
+    Axios.get('/test') //Gets fake data for development
       .then(function (response) {
-        // handle success
         console.log(response.data);
         data = response.data;
-        console.log("this is :", response.data[0].hostIcon)
+        console.log("this is server response:", data)
+        self.updateRender(data);
       })
       .catch(function (error) {
-        // handle error
         console.log(error);
       })
-      .finally(function () {
-        // always executed
-      });
-      this.updateRender(data);
   }
 
   componentDidMount() {
-    // this.setState({
-    //     movies : Module         //Get movies from dummyData
-    //   })
       this.getHello();
   }
 
   render() {
     return (
       <div>
-        <Review />
+        <Review fulldata={this.state.fulldata} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews}/>
       </div>
     )
   }

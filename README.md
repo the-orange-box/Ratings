@@ -1,13 +1,12 @@
-# Project Name
+# Airbnb: Ratings
 
-> Project description
+> A clone of Airbnb's reviews page
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/the-orange-box/moreHomesYouMayLike
+  - https://github.com/the-orange-box/reservation-system
+  - https://github.com/the-orange-box/Gallery
 
 ## Table of Contents
 
@@ -17,14 +16,14 @@
 
 ## Usage
 
-> Some usage instructions
+> TODO: Some usage instructions
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
-- etc
+- Check package.json
 
 ## Development
 

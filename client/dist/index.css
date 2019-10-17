@@ -1,0 +1,90 @@
+.noWrap {
+  display: inline;
+}
+
+.searchbox {
+  float: right;
+  background-color: gray;
+}
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.reviewbox {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: lightblue;
+}
+
+.ratingText {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+}
+
+.ratingNum {
+  float: right;
+  vertical-align: top;
+  position: relative;
+  top: -15px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 3px;
+  width: 93px;
+  border-radius: 50px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  float: none;
+  margin-right: 1em;
+  top: 10px;
+}
+
+.filler {
+  background: #1DA598;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+
+.iconimg {
+  border-radius: 50%;
+  width: 7%;
+  margin-right: 19px;
+}
+
+.messageUsername {
+  margin: 0px;
+  word-wrap: break-word;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em;
+  color: #484848;
+}
+
+.messageDate {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28571em;
+  color: rgb(72, 72, 72);
+}
+.messageText {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+}

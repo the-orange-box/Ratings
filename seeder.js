@@ -26,7 +26,7 @@ var seeds = [
             responded: false,
             responseText: "",
             responseTime: "",
-            postDate: "December",
+            postDate: "December 2018",
             totalRating: 5,
             ratings: {
                 Communication: 5,
@@ -45,7 +45,7 @@ var seeds = [
             responded: false,
             responseText: "",
             responseTime: "",
-            postDate: "January",
+            postDate: "January 2019",
             totalRating: 5,
             ratings: {
                 Communication: 5,
@@ -64,7 +64,7 @@ var seeds = [
             responded: false,
             responseText: "",
             responseTime: "",
-            postDate: "January",
+            postDate: "January 2019",
             totalRating: 5,
             ratings: {
                 Communication: 5,
@@ -74,7 +74,7 @@ var seeds = [
                 Accuracy: 5,
                 Location: 5
             }
-        },  
+        },
         ],
     })
 ];

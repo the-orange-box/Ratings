@@ -39,16 +39,5 @@ app.get('/ratings', (req,res) => {
     });
 });
 
-
-// //Get test movie data
-// app.get('/test', function (req, res) {
-//     res.status(200);                        //res.sendStatus(418) also sends body string
-//     console.log("Server is sending a greeting!");
-//     res.send([
-//         {hello: 'Hello World'},
-//         ])
-//     }
-// )
-
 // start server
 app.listen(PORT, () => console.log('Express server started on', PORT));

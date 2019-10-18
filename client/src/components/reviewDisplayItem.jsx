@@ -12,7 +12,7 @@ const ReviewDisplayItem = (props) => {
           </span>
           <div className='messageText'>{props.review.messageText}</div>
           <div className="separator-bar" style={ {marginTop: 24,marginBottom: 24} }>
-              <hr style={{ color: '#EBEBEB', backgroundColor: '#EBEBEB', height: .0, borderColor : '#EBEBEB' }} />
+              <hr style={{ color: '#FFFFFF', backgroundColor: '#FFFFFF', height: 0.0, borderColor : '#FFFFFF' }} />
           </div>
       </div>
   )

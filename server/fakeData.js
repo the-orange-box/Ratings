@@ -6,12 +6,12 @@ module.exports = [{
   totalRatingAverages: 5,
   totalReviews: 3,
   ratingAverages: {
-      Communication: 4.4,
+      Communication: 4.9,
       Cleanliness: 3.3,
-      Value: 2.0,
-      Checkin: 5.0,
-      Accuracy: 5.0,
-      Location: 5.0
+      Value: 2.1,
+      Checkin: 4.9,
+      Accuracy: 4.9,
+      Location: 4.9
   },
   reviews: [{
       userId: 1,

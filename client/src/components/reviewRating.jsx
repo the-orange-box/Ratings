@@ -11,7 +11,9 @@ class ReviewRatings extends React.Component {
     render() {
         console.log("Rendering ReviewsRatings", this.props.ratingAverages)
         console.log("Communication is: ", this.props.ratingAverages.Communication)
+        console.log("Check-in is: ", this.props.ratingAverages.Checkin)
         console.log("Accuracy is: ", this.props.ratingAverages.Accuracy)
+        console.log("Value is: ", this.props.ratingAverages.Value)
         console.log("Location is: ", this.props.ratingAverages.Location)
         console.log("Cleanliness is: ", this.props.ratingAverages.Cleanliness)
         return (

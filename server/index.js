@@ -9,7 +9,7 @@ var Ratings = require('../seed.js');
 const fake = require("./fakeData.js")
 
 // Set PORT# to listen on
-const PORT = 3050;
+const PORT = 3100;
 
 // create server
 const app = express();

@@ -3,9 +3,17 @@ import ReviewDisplayItem from './reviewDisplayItem.jsx'
 
 const ReviewDisplay = (props) => {
   console.log(props.reviews)
+  const test = (input) => {
+    if (input) {
+        console.log("TEST-------------------------------------",input)
+        return input;
+      }
+      return []
+    }
+
   return (
       <div>
-          {props.reviews.map((review) => <ReviewDisplayItem review={review}/> )}
+        {test(props.reviews).map((review) => <ReviewDisplayItem review={review}/> )}
       </div>
   )
 }

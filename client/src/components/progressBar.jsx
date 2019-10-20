@@ -20,7 +20,7 @@ class RatingsBar extends React.Component {
         <div className="progress-bar">
           <Filler rating={props.rating} />
         </div>
-        <text className="ratingNum">{props.rating}</text>
+        <text className="ratingNum">{props.rating.toFixed(1)}</text>
       </div>
       )
   }

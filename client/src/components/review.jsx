@@ -78,7 +78,7 @@ class Review extends React.Component {
                 <div className="spacing" style={ {marginTop: 10,marginBottom: 24} }>
                 </div>
                 <div>
-                    <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList}/>
+                    <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} fulldata={this.props.fulldata}/>
                 </div>
                 <MessageListNav SortedMessageArray={this.props.SortedMessageArray} currentMessageList={this.state.currentMessageList} MessageListBack={this.MessageListBack} MessageListForward={this.MessageListForward} MessageListSet={this.MessageListSet}/>
             </div>

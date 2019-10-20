@@ -164,6 +164,18 @@
   line-height: 1.375em;
   color: rgb(72, 72, 72);
 }
+.messageResponse {
+  margin: 0px;
+  margin-top: 10px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+  position: relative;
+  right: -50px;
+}
 
 .messageList {
   cursor: pointer;
@@ -197,7 +209,7 @@
   font-weight: 0;
   position: relative;
   margin-right: 40px;
-  right: -3px;
+  right: -4px;
 }
 .messageButton:hover {
   text-decoration: underline;

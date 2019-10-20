@@ -13,7 +13,7 @@ const ReviewDisplay = (props) => {
 
   return (
       <div>
-        {test(props.reviews).map((review) => <ReviewDisplayItem review={review}/> )}
+        {test(props.reviews).map((review) => <ReviewDisplayItem review={review} fulldata={props.fulldata}/> )}
       </div>
   )
 }

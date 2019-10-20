@@ -27,7 +27,6 @@ class Review extends React.Component {
     MessageListForward(event){
         if (this.state.currentMessageList < this.props.SortedMessageArray.length -1) {
             var result = parseInt(this.state.currentMessageList) + 1;
-            console.log("ASDSADSADASDSADASDAS==========================ASDSADSADASDSADASDAS=================ASDSADSADASDSADASDAS")
             this.setState({
                 currentMessageList: result
               })
@@ -36,7 +35,7 @@ class Review extends React.Component {
     }
 
     MessageListBack(event){
-        if (this.state.currentMessageList !== 0) {
+        if (this.state.currentMessageList > 0) {
             var result = parseInt(this.state.currentMessageList) - 1;
             this.setState({
                 currentMessageList: result
@@ -47,7 +46,7 @@ class Review extends React.Component {
 
     MessageListSet(event){
             this.setState({
-                currentMessageList: event.target.value
+                currentMessageList: parseInt(event.target.value)
               })
             console.log('MessageList Set', event.target.value);
         }

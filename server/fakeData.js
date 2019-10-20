@@ -56,9 +56,9 @@ module.exports = [{
       userName: "Daniel Collier",
       userIcon: "https://s3.amazonaws.com/uifaces/faces/twitter/wiljanslofstra/128.jpg",
       messageText: "Amazing House!",
-      responded: false,
-      responseText: "",
-      responseTime: "",
+      responded: true,
+      responseText: "Thanks for the definitely real review!",
+      responseTime: "January 2019",
       postDate: "January 2019",
       totalRating: 5,
       ratings: {

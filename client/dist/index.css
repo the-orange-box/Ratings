@@ -53,7 +53,18 @@
   color: rgb(72, 72, 72);
 }
 
-.searchbox1 {
+.glass {
+  height: 12px;
+  width: 12px;
+  display: block;
+  fill: black;
+  float: left;
+  position: relative;
+  top: 2px;
+  right: 8px;
+ }
+
+.searchBoxSpan {
   float: right;
   padding: 5px;
   font-size: 17px;
@@ -63,21 +74,13 @@
   top: -10px;
 }
 
-/* border-right: 1px solid rgb(235, 235, 235);
-height: 12px;
-
-white-space: pre-wrap;
-font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-font-size: 14px;
-line-height: 1.43;
-color: ; */
-
-.searchbox2 {
+.searchBoxForm {
   float: right;
+  padding: 4px 13px;
   border: 0px #ffffff;
 }
 
-.searchbox3 {
+.searchBoxInput {
   float: right;
   border: 0px #ffffff;
 }
@@ -163,8 +166,6 @@ color: ; */
 }
 
 .messageList {
-  flex: 1;
-  flex-direction: 'row';
   cursor: pointer;
   fill: #008B8B;
   list-style-type: none;
@@ -180,33 +181,44 @@ color: ; */
   font-size: 14px;
   font-weight: 0;
   margin-right: 40px;
+  position: relative;
+  top: 8px;
 }
 
 .messageButtonActive {
   border: none;
-  background: none;
+  background-color: #008B8B;
+  padding: 8px 12.5px;
+  border-radius: 100%;
   float: left;
-  color: #008B8B;
-  /* color: #ffffff;  */
+  color: #ffffff;
   cursor: pointer;
   font-size: 14px;
   font-weight: 0;
   position: relative;
-  top: 0px;
   margin-right: 40px;
+  right: -3px;
 }
 .messageButton:hover {
   text-decoration: underline;
 }
 
+.messageButtonActive:hover {
+  text-decoration: underline;
+}
+
 .messageArrow {
-  border: none;
-  background: none;
+  background: #ffffff;
+  border-width: 1px;
+  border-color: #008B8B;
+  border-radius: 100%;
+  padding: 7px 10px;
   float: left;
   color: #008B8B;
   cursor: pointer;
   font-size: 14px;
   margin-right: 40px;
+  border-style: solid;
 }
 
 .LeftMessageArrow {

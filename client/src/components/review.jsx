@@ -8,13 +8,22 @@ class Review extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            currentMessageList: 0
+            currentMessageList: 0,
+            searchString: ""
         }
         this.calculateAverage = this.calculateAverage.bind(this)
         this.MessageListForward = this.MessageListForward.bind(this)
         this.MessageListBack = this.MessageListBack.bind(this)
         this.RenderDisplay = this.RenderDisplay.bind(this)
         this.MessageListSet = this.MessageListSet.bind(this)
+        this.setSearch = this.setSearch.bind(this)
+    }
+
+    setSearch(input){
+        console.log("IM SETTING A SEARCH RIGHT NOW!!============", this.state.currentMessageList)
+        this.setState({
+            currentMessageList: input
+          })
     }
 
     calculateAverage(){
@@ -67,7 +76,7 @@ class Review extends React.Component {
                 <div style={{width: 648, height: 76}}>
                     <h2 className="hello" style={ {color: '#484848', fontSize: 24, fontWeight: 600, fontFamily: "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif", lineHeight: 1.25, paddingtop: 2, paddingBottom: 2,margin: 0, marginBottom: 20} }>Reviews</h2>
                     <div style={ {height: 38, color: '#484848', fontSize: 18, fontWeight: 600, fontFamily: "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif", lineHeight: 1.25, paddingtop: 2,margin: 0} }>
-                    <span className="star"></span><span>{this.calculateAverage()} <span className='reviewDiv'></span><span className='reviewCount'>{this.props.reviews.length}</span><span className='reviewReview'>{" reviews"}</span><span className="test"><SearchBar /></span></span>
+                    <span className="star"></span><span>{this.calculateAverage()} <span className='reviewDiv'></span><span className='reviewCount'>{this.props.reviews.length}</span><span className='reviewReview'>{" reviews"}</span><span className="test"><SearchBar setSearch = {this.setSearch}/></span></span>
                     </div>
                 </div>
                 <div className="separator-bar" style={ {marginTop: 17, marginBottom: 15} }>
@@ -77,7 +86,7 @@ class Review extends React.Component {
                 <div className="spacing" style={ {marginTop: 10,marginBottom: 24} }>
                 </div>
                 <div>
-                    <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} fulldata={this.props.fulldata}/>
+                    <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} fulldata={this.props.fulldata} searchString={this.state.searchString}/>
                 </div>
                 <MessageListNav SortedMessageArray={this.props.SortedMessageArray} currentMessageList={this.state.currentMessageList} MessageListBack={this.MessageListBack} MessageListForward={this.MessageListForward} MessageListSet={this.MessageListSet}/>
             </div>

@@ -1,21 +1,20 @@
 import React from 'react';
 
 const ReviewDisplayItem = (props) => {
-function test(){
+function checkResponse(){
   if(props.review.responded===true) {
-    console.log("============================================================================ITS HAPPENING")
     return (
       <div className="messageResponse">
-      <span className="box" style={{flex: 1, flexDirection: 'row', marginBottom: 20}}>
-      <img className='iconimg' src={props.fulldata.hostIcon}></img>
-      <span className='messageUsername'>
+      <span className="box" style={{flex: 1, flexDirection: 'row', marginBottom: 20, marginTop: 16}}>
+      <img className='iconimgResponse' src={props.fulldata.hostIcon}></img>
+      <span className='messageUsernameResponse'>
         Response from {props.fulldata.hostName}:
-        <div className='messageDate'>{props.review.responseTime}</div>
+        <div className='messageTextResponse'>{props.review.responseText}</div>
       </span>
       </span>
-      <div className='messageText'>{props.review.responseText}</div>
-      </div>
 
+      <div className='messageDateResponse'>{props.review.responseTime}</div>
+      </div>
     )
   }
 }
@@ -29,7 +28,7 @@ function test(){
           </span>
           </span>
           <div className='messageText'>{props.review.messageText}</div>
-          {test()}
+          {checkResponse()}
           <div className="separator-bar" style={ {marginTop: 24,marginBottom: 24} }>
               <hr style={{ color: '#FFFFFF', backgroundColor: '#FFFFFF', height: 0.0, borderColor : '#FFFFFF' }} />
           </div>

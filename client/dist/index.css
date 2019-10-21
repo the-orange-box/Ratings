@@ -164,6 +164,7 @@
   line-height: 1.375em;
   color: rgb(72, 72, 72);
 }
+
 .messageResponse {
   margin: 0px;
   margin-top: 10px;
@@ -176,7 +177,39 @@
   position: relative;
   right: -50px;
 }
-
+.iconimgResponse {
+  border-radius: 50%;
+  width: 6%;
+  margin-right: 19px;
+}
+.messageUsernameResponse {
+  margin: 0px;
+  word-wrap: break-word;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+.messageTextResponse {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+}
+.messageDateResponse {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28571em;
+  color: rgb(125, 125, 125);
+  position: relative;
+  right: -57px;
+}
 .messageList {
   cursor: pointer;
   fill: #008B8B;

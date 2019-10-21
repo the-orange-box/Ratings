@@ -58,8 +58,7 @@ class Review extends React.Component {
     }
 
     render() {
-        console.log("Rendering Reviews")
-        console.log("Review.jsx props are: ", this.props.SortedMessageArray)
+        console.log("Rendering Reviews" , this.props.SortedMessageArray)
         return (
             <div style={{width: 648}}>
                 <div className="separator-bar" style={ {marginTop: 24,marginBottom: 24} }>

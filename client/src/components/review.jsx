@@ -19,17 +19,19 @@ class Review extends React.Component {
         this.setSearch = this.setSearch.bind(this)
     }
 
-    setSearch(input){
-        console.log("IM SETTING A SEARCH RIGHT NOW!!============", this.state.currentMessageList)
-        this.setState({
-            currentMessageList: input
-          })
+    setSearch(event){
+        event.preventDefault()
+        console.log(event.target.value)
+        // this.setState({                      //Search isnt implemented yet
+        //     searchString: event.target.value
+        // })
+        // console.log(this.state.searchString)
     }
 
     calculateAverage(){
         var totalResult = this.props.ratingAverages.Communication + this.props.ratingAverages.Checkin + this.props.ratingAverages.Accuracy + this.props.ratingAverages.Value + this.props.ratingAverages.Location + this.props.ratingAverages.Cleanliness;
         totalResult = (totalResult / 6).toFixed(2);
-        console.log("Calculating Total Average: ", totalResult)
+        //console.log("Calculating Total Average: ", totalResult)
         return totalResult;
     }
 
@@ -39,7 +41,7 @@ class Review extends React.Component {
             this.setState({
                 currentMessageList: result
               })
-            console.log('MessageList Add', this.state.currentMessageList);
+            //console.log('MessageList Add', this.state.currentMessageList);
         }
     }
 
@@ -49,7 +51,7 @@ class Review extends React.Component {
             this.setState({
                 currentMessageList: result
               })
-            console.log('MessageList Subtracted', this.state.currentMessageList);
+            //console.log('MessageList Subtracted', this.state.currentMessageList);
         }
     }
 
@@ -57,33 +59,38 @@ class Review extends React.Component {
             this.setState({
                 currentMessageList: parseInt(event.target.value)
               })
-            console.log('MessageList Set', event.target.value);
+            //console.log('MessageList Set', event.target.value);
         }
 
     RenderDisplay(){
-        if (true) {
-            return this.props.SortedMessageArray[this.state.currentMessageList]
-        }
+        return this.props.SortedMessageArray[this.state.currentMessageList]
     }
 
     render() {
-        console.log("Rendering Reviews" , this.props.SortedMessageArray)
+        //console.log("Rendering Reviews" , this.props.SortedMessageArray)
         return (
             <div style={{width: 648}}>
-                <div className="separator-bar" style={ {marginTop: 24,marginBottom: 24} }>
-                    <hr style={{ color: '#FFFFFF', backgroundColor: '#FFFFFF', height: .0, borderColor : '#FFFFFF' }} />
+                <div className="separatorBarTop">
+                    <hr className="hrStyle" />
                 </div>
                 <div style={{width: 648, height: 76}}>
-                    <h2 className="hello" style={ {color: '#484848', fontSize: 24, fontWeight: 600, fontFamily: "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif", lineHeight: 1.25, paddingtop: 2, paddingBottom: 2,margin: 0, marginBottom: 20} }>Reviews</h2>
-                    <div style={ {height: 38, color: '#484848', fontSize: 18, fontWeight: 600, fontFamily: "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif", lineHeight: 1.25, paddingtop: 2,margin: 0} }>
-                    <span className="star"></span><span>{this.calculateAverage()} <span className='reviewDiv'></span><span className='reviewCount'>{this.props.reviews.length}</span><span className='reviewReview'>{" reviews"}</span><span className="test"><SearchBar setSearch = {this.setSearch}/></span></span>
+                    <h2 style={ {color: '#484848', fontSize: 24, fontWeight: 600, fontFamily: "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif", lineHeight: 1.25, paddingtop: 2, paddingBottom: 2,margin: 0, marginBottom: 20} }>Reviews</h2>
+                    <div className="reviewAverages">
+                    <span className="star"></span>
+                    <span>
+                        {this.calculateAverage()} 
+                            <span className='reviewDiv'></span>
+                            <span className='reviewCount'>{this.props.reviews.length}</span>
+                            <span className='reviewReview'>{" reviews"}</span>
+                            <span className="test"><SearchBar setSearch = {this.setSearch}/></span>
+                    </span>
                     </div>
                 </div>
-                <div className="separator-bar" style={ {marginTop: 17, marginBottom: 15} }>
-                    <hr style={{ color: '#FFFFFF', backgroundColor: '#FFFFFF', height: .0, borderColor : '#FFFFFF' }} />
+                <div className="separatorBarMid">
+                    <hr className="hrStyle" />
                 </div>
                     <ReviewRating ratingAverages={this.props.ratingAverages}/>
-                <div className="spacing" style={ {marginTop: 10,marginBottom: 24} }>
+                <div className="reviewSpacing" >
                 </div>
                 <div>
                     <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} fulldata={this.props.fulldata} searchString={this.state.searchString}/>

@@ -9,8 +9,8 @@ class MessageListNavNum extends React.Component {
   }
 
   render() {
-  console.log("Rendering MessageListNavNum: ",this.props.SortedMessageArray.length)
-  console.log("currentMessageList: ", this.props.currentMessageList)
+  //console.log("Rendering MessageListNavNum: ",this.props.SortedMessageArray.length)
+  //console.log("currentMessageList: ", this.props.currentMessageList)
   return (
     <ul className="messageList">
     {this.props.currentMessageList === 0 ? console.log("No Left Arrow!") : <button className="messageArrow" onClick={this.props.MessageListBack}>
@@ -31,11 +31,11 @@ class MessageListNavNum extends React.Component {
       : key === this.props.currentMessageList+1 && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
       <span><li><button className="messageButton" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li> 
       <li><button className="messagePeriods">...</button></li></span>
-      :console.log("false ", key)
+      : console.log("false ", key)
     )}
     {this.props.currentMessageList === this.props.SortedMessageArray.length-1 ? <li><button className="messageButtonActive" value={this.props.SortedMessageArray.length-1} onClick={this.props.MessageListSet}>{this.props.SortedMessageArray.length}</button></li> :
     <li><button className="messageButton" value={this.props.SortedMessageArray.length-1} onClick={this.props.MessageListSet}>{this.props.SortedMessageArray.length}</button></li>}
-    {this.props.currentMessageList === this.props.SortedMessageArray.length ? console.log("No Right Arrow!") : <button className="messageArrow" onClick={this.props.MessageListForward}>
+    {this.props.currentMessageList === this.props.SortedMessageArray.length-1 ? console.log("No Right Arrow!") : <button className="messageArrow" onClick={this.props.MessageListForward}>
       <svg viewBox="0 0 18 18"className="RightMessageArrow" >
         <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" />
       </svg>
@@ -46,7 +46,3 @@ class MessageListNavNum extends React.Component {
 }
 
 export default MessageListNavNum;
-
-/*  
-
-*/

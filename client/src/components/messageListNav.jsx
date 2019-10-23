@@ -10,7 +10,7 @@ class MessageListNav extends React.Component {
   }
 
   render() {
-    console.log("Rendering MessageListNav", this.props.SortedMessageArray)
+    //console.log("Rendering MessageListNav", this.props.SortedMessageArray)
     return(
       <div style={{flex: 1, flexDirection: 'row'}}>
         <MessageListNavNum currentMessageList={this.props.currentMessageList} SortedMessageArray={this.props.SortedMessageArray} MessageListBack={this.props.MessageListBack} MessageListForward={this.props.MessageListForward} MessageListSet={this.props.MessageListSet}/>

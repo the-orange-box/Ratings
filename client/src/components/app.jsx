@@ -28,22 +28,21 @@ class App extends React.Component {
       ratingAverages: update[0].ratingAverages,
       reviews: update[0].reviews
     })
-    console.log("Updating Render ",this.state)
+    //console.log("Updating Render ",this.state)
   }
 
   getHello(){
-    var self = this;
-    console.log("Getting Reviews")
+    //console.log("Getting Reviews")
     var data = [];
     // Axios.get('/ratings') //Gets 'real' data from database
     Axios.get('/test') //Gets fake data for development
-      .then(function (response) {
+      .then((response) => {
         data = response.data;
-        console.log("this is server response:", data)
-        self.updateRender(data);
+        //console.log("this is server response:", data)
+        this.updateRender(data);
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch((error) => {
+        //console.log(error);
       })
   }
 
@@ -57,7 +56,7 @@ class App extends React.Component {
         }
     }
     resultArray.push(tempArray);
-    console.log("Sorted Message List:", resultArray)
+    //console.log("Sorted Message List:", resultArray)
 
     return resultArray;
   }

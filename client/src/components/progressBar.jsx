@@ -17,7 +17,7 @@ class RatingsBar extends React.Component {
   const ProgressBar = (props) => {
     return (
       <div className="noWrap" style={{width: 648, height:88}}>
-        <div className="progress-bar">
+        <div className="progressBar">
           <Filler rating={props.rating} />
         </div>
         <text className="ratingNum">{props.rating.toFixed(1)}</text>

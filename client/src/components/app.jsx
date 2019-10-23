@@ -35,14 +35,14 @@ class App extends React.Component {
     //console.log("Getting Reviews")
     var data = [];
     // Axios.get('/ratings') //Gets 'real' data from database
-    Axios.get('/test') //Gets fake data for development
+    Axios.get('http://localhost:3002/test/test') //Gets fake data for development
       .then((response) => {
         data = response.data;
         //console.log("this is server response:", data)
         this.updateRender(data);
       })
       .catch((error) => {
-        //console.log(error);
+        console.log(error);
       })
   }
 

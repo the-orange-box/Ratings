@@ -34,8 +34,8 @@ class App extends React.Component {
   getHello(){
     //console.log("Getting Reviews")
     var data = [];
-    // Axios.get('/ratings') //Gets 'real' data from database
-    Axios.get('http://localhost:3002/test/test') //Gets fake data for development
+    Axios.get('http://localhost:3002/ratings' + window.location.pathname) //Gets 'real' data from database
+    // Axios.get('http://localhost:3002/test/test') //Gets fake data for development
       .then((response) => {
         data = response.data;
         //console.log("this is server response:", data)

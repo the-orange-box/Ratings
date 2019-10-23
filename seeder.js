@@ -1918,42 +1918,41 @@ var seeds = [
           }
         },
         ],
-    },
-    {
-        placeId: 2,
-        hostId: 2,
-        hostName: "Jimmy Meh",
-        hostIcon: 'https://s3.amazonaws.com/uifaces/faces/twitter/maz/128.jpg',
-        totalRatingAverages: 1,
-        ratingAverages: {
-            Communication: 1,
-            Cleanliness: 1,
-            Value: 1,
-            Checkin: 1,
-            Accuracy: 1,
-            Location: 1
-        },
-        reviews: [{
-            userId: 1,
-            userName: "Kevin Smith",
-            userIcon: "https://s3.amazonaws.com/uifaces/faces/twitter/peterlandt/128.jpg",
-            messageText: "I Love the Cats!",
-            responded: false,
-            responseText: "",
-            responseTime: "",
-            postDate: "December 2018",
-            totalRating: 5,
-            ratings: {
-                Communication: 5,
-                Cleanliness: 5,
-                Value: 5,
-                Checkin: 5,
-                Accuracy: 5,
-                Location: 5
-            }
-        }]
-    }
-    )
+    }),
+    new Ratings({
+      placeId: 2,
+      hostId: 2,
+      hostName: "Jimmy Meh",
+      hostIcon: 'https://s3.amazonaws.com/uifaces/faces/twitter/maz/128.jpg',
+      totalRatingAverages: 2,
+      ratingAverages: {
+          Communication: 1,
+          Cleanliness: 1,
+          Value: 5,
+          Checkin: 1,
+          Accuracy: 5,
+          Location: 1
+      },
+      reviews: [{
+          userId: 1,
+          userName: "Kevin Smith",
+          userIcon: "https://s3.amazonaws.com/uifaces/faces/twitter/peterlandt/128.jpg",
+          messageText: "Terrible Place!",
+          responded: false,
+          responseText: "",
+          responseTime: "",
+          postDate: "December 2018",
+          totalRating: 5,
+          ratings: {
+              Communication: 5,
+              Cleanliness: 5,
+              Value: 5,
+              Checkin: 5,
+              Accuracy: 5,
+              Location: 5
+          }
+      }]
+    })
 ];
 
 var done=0;

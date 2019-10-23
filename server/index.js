@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 var Ratings = require('../seed.js');
-// mongoose.connect('mongodb://localhost:27017/ratings',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/ratings',{ useNewUrlParser: true, useUnifiedTopology: true });
 
 const fake = require("./fakeData.js")
 const PORT = 3002;
@@ -22,8 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //Test GET handler
 // app.get('/', (req,res) => {res.sendStatus(418)});
 
-function getStuff(cb) {
-    Ratings.find({}).exec(cb);
+function getStuff(placeId,cb) {
+    Ratings.find({placeId}).exec(cb);
 }
 
 //Gets fake data for development
@@ -33,8 +33,8 @@ app.get('/test/test', (req,res) => {
 });
 
 //Gets 'real' data from database
-app.get('/ratings:placeid', (req,res) => {
-    getStuff((err, result)=>{
+app.get('/ratings/:placeid', (req,res) => {
+    getStuff(req.params.placeid, (err, result)=>{
         res.send(result);
     });
 });

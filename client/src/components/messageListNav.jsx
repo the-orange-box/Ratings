@@ -5,7 +5,6 @@ class MessageListNav extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-        hello: "Hello World"
     }
   }
 

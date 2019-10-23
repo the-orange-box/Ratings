@@ -11,6 +11,7 @@ class MessageListNavNum extends React.Component {
   render() {
   //console.log("Rendering MessageListNavNum: ",this.props.SortedMessageArray.length)
   //console.log("currentMessageList: ", this.props.currentMessageList)
+                        //Crazy ternary operator spaghetti monster
   return (
     <ul className="messageList">
     {this.props.currentMessageList === 0 ? console.log("No Left Arrow!") : <button className="messageArrow" onClick={this.props.MessageListBack}>
@@ -18,18 +19,18 @@ class MessageListNavNum extends React.Component {
         <path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" />
       </svg>
     </button>}
-    {this.props.currentMessageList === 0 ? <li><button className="messageButtonActive" value={0} onClick={this.props.MessageListSet}>{1}</button></li> :
-    <li><button className="messageButton" value={0} onClick={this.props.MessageListSet}>{1}</button></li>}
-    {this.props.SortedMessageArray.map((item,key) => 
+    {this.props.currentMessageList === 0 ?
+    <li><button className="messageButtonActive" value={0} onClick={this.props.MessageListSet}>{1}</button></li> :<li><button className="messageButton" value={0} onClick={this.props.MessageListSet}>{1}</button></li>}
+    {this.props.SortedMessageArray.map((item,key) =>
       key === this.props.currentMessageList-1 && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
-      <span><li><button className="messagePeriods">...</button></li> 
+      <span><li><button className="messagePeriods">...</button></li>
       <li><button className="messageButton" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li> </span>
       : key === this.props.currentMessageList && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
-      key === this.props.currentMessageList ? 
-      <li><button className="messageButtonActive" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li> 
-      : <li><button className="messageButton" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li> 
+      key === this.props.currentMessageList ?
+      <li><button className="messageButtonActive" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li>
+      : <li><button className="messageButton" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li>
       : key === this.props.currentMessageList+1 && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
-      <span><li><button className="messageButton" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li> 
+      <span><li><button className="messageButton" value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li>
       <li><button className="messagePeriods">...</button></li></span>
       : console.log("false ", key)
     )}

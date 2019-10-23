@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './modules/progressBar.module.css'
 
 class RatingsBar extends React.Component {
     constructor(props) {
@@ -16,17 +17,17 @@ class RatingsBar extends React.Component {
 
   const ProgressBar = (props) => {
     return (
-      <div className="noWrap" style={{width: 648, height:88}}>
-        <div className="progressBar">
+      <div className={styles.noWrap} style={{width: 648, height:88}}>
+        <div className={styles.progressBar}>
           <Filler rating={props.rating} />
         </div>
-        <text className="ratingNum">{props.rating.toFixed(1)}</text>
+        <text className={styles.ratingNum}>{props.rating.toFixed(1)}</text>
       </div>
       )
   }
 
   const Filler = (props) => {
-    return <div className="filler" style={{ width: `${props.rating*20}%` }} />
+    return <div className={styles.filler} style={{ width: `${props.rating*20}%` }} />
   }
 
 

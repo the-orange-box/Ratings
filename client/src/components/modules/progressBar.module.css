@@ -1,0 +1,38 @@
+.noWrap {
+    display: inline;
+}
+
+.progressBar {
+    position: relative;
+    height: 4px;
+    width: 93px;
+    border-radius: 50px;
+    background-color: #DCDCDC;
+    border: 0px solid #333;
+    margin-bottom: 10px;
+    float: none;
+    margin-right: 1em;
+    top: 10px;
+}
+
+.filler {
+    background: #008B8B;
+    height: 100%;
+    border-radius: inherit;
+    border-radius: 50px;
+    transition: width .2s ease-in;
+}
+  
+.ratingNum {
+    margin: 0px;
+    overflow-wrap: break-word;
+    color: rgb(72, 72, 72);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.375em;
+    float: right;
+    vertical-align: top;
+    position: relative;
+    top: -15px;
+  }

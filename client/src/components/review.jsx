@@ -3,6 +3,7 @@ import ReviewDisplay from './reviewDisplay.jsx';
 import ReviewRating from './reviewRating.jsx';
 import SearchBar from './searchBar.jsx';
 import MessageListNav from './messageListNav.jsx';
+import styles from './modules/review.module.css';
 
 class Review extends React.Component {
     constructor(props){
@@ -69,28 +70,28 @@ class Review extends React.Component {
     render() {
         //console.log("Rendering Reviews" , this.props.SortedMessageArray)
         return (
-            <div style={{width: 648}}>
-                <div className="separatorBarTop">
-                    <hr className="hrStyle" />
+            <div className={styles.reviewWidth1}>
+                <div className={styles.separatorBarTop}>
+                    <hr className={styles.hrStyle} />
                 </div>
-                <div style={{width: 648, height: 76}}>
-                    <h2 style={ {color: '#484848', fontSize: 24, fontWeight: 600, fontFamily: "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif", lineHeight: 1.25, paddingtop: 2, paddingBottom: 2,margin: 0, marginBottom: 20} }>Reviews</h2>
-                    <div className="reviewAverages">
-                    <span className="star"></span>
+                <div className={styles.reviewWidth2}>
+                    <h2 className={styles.title}>Reviews</h2>
+                    <div className={styles.reviewAverages}>
+                    <span className={styles.star}></span>
                     <span>
                         {this.calculateAverage()} 
-                            <span className='reviewDiv'></span>
-                            <span className='reviewCount'>{this.props.reviews.length}</span>
-                            <span className='reviewReview'>{" reviews"}</span>
-                            <span className="test"><SearchBar setSearch = {this.setSearch}/></span>
+                            <span className={styles.reviewDiv}></span>
+                            <span className={styles.reviewCount}>{this.props.reviews.length}</span>
+                            <span className={styles.reviewReview}>{" reviews"}</span>
+                            <span><SearchBar setSearch = {this.setSearch}/></span>
                     </span>
                     </div>
                 </div>
-                <div className="separatorBarMid">
-                    <hr className="hrStyle" />
+                <div className={styles.separatorBarMid}>
+                    <hr className={styles.hrStyle} />
                 </div>
                     <ReviewRating ratingAverages={this.props.ratingAverages}/>
-                <div className="reviewSpacing" >
+                <div className={styles.reviewSpacing} >
                 </div>
                 <div>
                     <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} fulldata={this.props.fulldata} searchString={this.state.searchString}/>

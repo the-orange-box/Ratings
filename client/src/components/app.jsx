@@ -10,41 +10,55 @@ class App extends React.Component {
       fulldata: [],
       reviews: [],
       ratingAverages: {
-        communication: 0.1,
-        accuracy: 0.1,
-        location: 0.1,
-        checkin: 0.1,
-        value: 0.1,
-        Cleanliness: 0.1
+        Communication: 0.0,
+        Cleanliness: 0.0,
+        Accuracy: 0.0,
+        Location: 0.0,
+        Checkin: 0.0,
+        Value: 0.0
       }
     }
     this.updateRender = this.updateRender.bind(this)
     this.getHello = this.getHello.bind(this)
+    this.SortMessageList = this.SortMessageList.bind(this)
   }
   updateRender(update) {
-    console.log("Updating Render ",this.state)
     this.setState({
       fulldata: update[0],     //Remember res stores the 'send' data in a data obj
       ratingAverages: update[0].ratingAverages,
       reviews: update[0].reviews
     })
+    //console.log("Updating Render ",this.state)
   }
 
   getHello(){
-    var self = this;
-    console.log("Getting Reviews")
+    //console.log("Getting Reviews")
     var data = [];
-    // Axios.get('/ratings') //Gets 'real' data from database
-    Axios.get('/test') //Gets fake data for development
-      .then(function (response) {
-        console.log(response.data);
+    Axios.get('http://localhost:3002/ratings' + window.location.pathname) //Gets 'real' data from database
+    // Axios.get('http://localhost:3002/test/test') //Gets fake data for development
+      .then((response) => {
         data = response.data;
-        console.log("this is server response:", data)
-        self.updateRender(data);
+        //console.log("this is server response:", data)
+        this.updateRender(data);
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       })
+  }
+
+  SortMessageList(){
+    let resultArray=[]
+    let tempArray=[]
+    for(let i=0; i < this.state.reviews.length; i++) {
+        tempArray.push(this.state.reviews[i])
+        if (tempArray.length === 7) {
+            resultArray.push(tempArray.splice(0,7 ))
+        }
+    }
+    resultArray.push(tempArray);
+    //console.log("Sorted Message List:", resultArray)
+
+    return resultArray;
   }
 
   componentDidMount() {
@@ -54,7 +68,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Review fulldata={this.state.fulldata} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews}/>
+        <Review fulldata={this.state.fulldata} SortedMessageArray={this.SortMessageList()} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews}/>
       </div>
     )
   }

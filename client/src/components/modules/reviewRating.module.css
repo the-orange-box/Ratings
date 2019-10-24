@@ -1,0 +1,49 @@
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1;
+    flex-direction: row;
+}
+
+.ratingText1 {
+    margin: 0px;
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375em;
+    color: rgb(72, 72, 72);
+    width: 180px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.ratingText2 {
+    margin: 0px;
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375em;
+    color: rgb(72, 72, 72);
+    width: 180px;
+    height: 33px;
+    margin-right: 24px;
+}
+
+.ratingsBar1 {
+    width: 170px;
+    height: 33px;
+    margin-right: 38px;
+}
+
+.ratingsBar2 {
+    width: 170px;
+    height: 33px;
+    margin-right: 65px;
+}
+
+.lineLength{
+    width: 648px;
+    height: 88px;
+}

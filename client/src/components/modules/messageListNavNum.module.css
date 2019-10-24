@@ -1,0 +1,94 @@
+.messageList {
+    cursor: pointer;
+    fill: #008B8B;
+    list-style-type: none;
+    overflow: hidden;
+} 
+
+.messageButton {
+    border: none;
+    background: none;
+    float: left;
+    color: #008B8B;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 0;
+    margin-right: 36px;
+    position: relative;
+    top: 8px;
+    outline-color: transparent;
+    outline-style: none;
+} 
+
+.messagePeriods {
+    border: none;
+    background: none;
+    float: left;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 0;
+    margin-right: 36px;
+    position: relative;
+    top: 8px;
+    outline-color: transparent;
+    outline-style: none;
+}  
+
+.messageButtonActive {
+    border: none;
+    background-color: #008B8B;
+    padding: 8px 12.5px;
+    border-radius: 50%;
+    float: left;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 0;
+    position: relative;
+    margin-right: 36px;
+    right: -2px;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.messageButton:hover {
+    text-decoration: underline;
+}
+  
+.messageButtonActive:hover {
+    text-decoration: underline;
+}
+  
+.messageArrow {
+    background: #ffffff;
+    border-width: 1px;
+    border-color: #008B8B;
+    border-radius: 50%;
+    padding: 7px 10px;
+    float: left;
+    color: #008B8B;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 40px;
+    border-style: solid;
+    outline-color: transparent;
+    outline-style: none;
+}
+  
+.LeftMessageArrow {
+    cursor: pointer;
+    height: 0.75em;
+    width: 0.75em;
+    fill: #008B8B;
+    outline-color: transparent;
+    outline-style: none;
+}
+  
+.RightMessageArrow {
+    cursor: pointer;
+    height: 0.75em;
+    width: 0.75em;
+    fill: #008B8B;
+    outline-color: transparent;
+    outline-style: none;
+}

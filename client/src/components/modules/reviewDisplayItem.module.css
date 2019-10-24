@@ -1,0 +1,115 @@
+.messageResponse {
+  margin: 0px;
+  margin-top: 10px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+  position: relative;
+  right: -50px;
+}
+  
+.boxTop{
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+  flex-direction: row; 
+  margin-bottom: 20px; 
+  margin-top: 16px;
+}
+
+.iconimgResponse {
+  border-radius: 50%;
+  width: 6%;
+  margin-right: 19px;
+}
+
+.messageUsernameResponse {
+  margin: 0px;
+  word-wrap: break-word;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.messageTextResponse {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+}
+  
+.messageDateResponse {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28571em;
+  color: rgb(125, 125, 125);
+  position: relative;
+  right: -57px;
+}
+  
+.boxBottom{
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.iconimg {
+  border-radius: 50%;
+  width: 7%;
+  margin-right: 19px;
+}
+
+.messageUsername {
+  margin: 0px;
+  word-wrap: break-word;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em;
+  color: #484848;
+}
+  
+.messageDate {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28571em;
+  color: rgb(72, 72, 72);
+}
+
+.messageText {
+  margin: 0px;
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+}
+  
+.messageSeparator{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.messageHr{
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  height: 0.0px;
+  border-color : #FFFFFF;
+}
+ 

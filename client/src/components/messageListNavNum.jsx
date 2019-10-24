@@ -19,8 +19,11 @@ class MessageListNavNum extends React.Component {
         <path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" />
       </svg>
     </button>}
-    {this.props.currentMessageList === 0 ?
-    <li><button className={styles.messageButtonActive} value={0} onClick={this.props.MessageListSet}>{1}</button></li> :<li><button className={styles.messageButton} value={0} onClick={this.props.MessageListSet}>{1}</button></li>}
+    {this.props.SortedMessageArray.length !== 1 ?
+      this.props.currentMessageList === 0 ?
+    <li><button className={styles.messageButtonActive} value={0} onClick={this.props.MessageListSet}>{1}</button></li> :<li><button className={styles.messageButton} value={0} onClick={this.props.MessageListSet}>{1}</button></li>
+    : null
+    }
     {this.props.SortedMessageArray.map((item,key) =>
       key === this.props.currentMessageList-1 && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
       <span><li><button className={styles.messagePeriods}>...</button></li>
@@ -34,8 +37,11 @@ class MessageListNavNum extends React.Component {
       <li><button className={styles.messagePeriods}>...</button></li></span>
       : null
     )}
-    {this.props.currentMessageList === this.props.SortedMessageArray.length-1 ? <li><button className={styles.messageButtonActive} value={this.props.SortedMessageArray.length-1} onClick={this.props.MessageListSet}>{this.props.SortedMessageArray.length}</button></li> :
-    <li><button className={styles.messageButton} value={this.props.SortedMessageArray.length-1} onClick={this.props.MessageListSet}>{this.props.SortedMessageArray.length}</button></li>}
+    {this.props.SortedMessageArray.length !== 1 ?
+    this.props.currentMessageList === this.props.SortedMessageArray.length-1 ? <li><button className={styles.messageButtonActive} value={this.props.SortedMessageArray.length-1} onClick={this.props.MessageListSet}>{this.props.SortedMessageArray.length}</button></li> :
+    <li><button className={styles.messageButton} value={this.props.SortedMessageArray.length-1} onClick={this.props.MessageListSet}>{this.props.SortedMessageArray.length}</button></li>
+    : null
+    }
     {this.props.currentMessageList === this.props.SortedMessageArray.length-1 ? null : <button className={styles.messageArrow} onClick={this.props.MessageListForward}>
       <svg viewBox="0 0 18 18"className={styles.RightMessageArrow} >
         <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" />

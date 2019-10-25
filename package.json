@@ -42,7 +42,8 @@
     "start": "live-server",
     "server-start": "nodemon ./server/index.js",
     "seed-database": "node seeder.js",
-    "test": "jest"
+    "test": "jest",
+    "database": "mongod"
   },
   "repository": {
     "type": "git",

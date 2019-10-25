@@ -22,11 +22,14 @@ class Review extends React.Component {
 
     setSearch(event){
         event.preventDefault()
-        console.log(event.target.value)
-        // this.setState({                      //Search isnt implemented yet
-        //     searchString: event.target.value
-        // })
-        // console.log(this.state.searchString)
+        var temp = event.target
+        console.log("temp is: ", temp)
+        console.log("temp is: ", temp.value)
+        
+        this.setState({                      //Search isnt implemented yet
+            searchString: event.target.value
+        })
+        console.log(this.state.searchString)
     }
 
     calculateAverage(){

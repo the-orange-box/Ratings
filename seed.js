@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
 var ratingSchema = new Schema({
     placeId: Number,
     hostId: Number,

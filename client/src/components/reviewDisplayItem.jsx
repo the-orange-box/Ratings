@@ -14,7 +14,7 @@ function checkResponse(){
       </span>
       </span>
 
-      <div className={styles.messageDateResponse}>{props.review.responseTime}</div>
+      <div className={styles.messageDateResponse}>{props.review.responseTime} 2019</div>
       </div>
     )
   }
@@ -25,7 +25,7 @@ function checkResponse(){
           <img className={styles.iconimg} src={props.review.userIcon}></img>
           <span className={styles.messageUsername}>
             {props.review.userName}
-            <div className={styles.messageDate}>{props.review.postDate}</div>
+            <div className={styles.messageDate}>{props.review.postDate} 2019</div>
           </span>
           </span>
           <div className={styles.messageText}>{props.review.messageText}</div>

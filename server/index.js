@@ -6,7 +6,7 @@ var Ratings = require('../seed.js');
 mongoose.connect('mongodb://localhost:27017/ratings',{ useNewUrlParser: true, useUnifiedTopology: true });
 
 const fake = require("./fakeData.js")
-const PORT = 3002;
+const PORT = 3012;
 const app = express();
 
 app.use(function(req, res, next) {

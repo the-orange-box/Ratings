@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      hello: "",
+      searchString: '',
       fulldata: [],
       reviews: [],
       ratingAverages: {
@@ -21,7 +21,16 @@ class App extends React.Component {
     this.updateRender = this.updateRender.bind(this)
     this.getHello = this.getHello.bind(this)
     this.SortMessageList = this.SortMessageList.bind(this)
+    this.setSearch = this.setSearch.bind(this)
   }
+
+  setSearch(event, state){
+    event.preventDefault();
+    this.setState({
+      searchString: state
+    })
+  }
+
   updateRender(update) {
     this.setState({
       fulldata: update[0],     //Remember res stores the 'send' data in a data obj
@@ -34,7 +43,7 @@ class App extends React.Component {
   getHello(){
     //console.log("Getting Reviews")
     var data = [];
-    Axios.get('http://localhost:3012/ratings' + window.location.pathname) //Gets 'real' data from database
+    Axios.get('http://localhost:3002/ratings' + window.location.pathname) //Gets 'real' data from database
     // Axios.get('http://localhost:3002/test/test') //Gets fake data for development
       .then((response) => {
         data = response.data;
@@ -50,7 +59,12 @@ class App extends React.Component {
     let resultArray=[]
     let tempArray=[]
     for(let i=0; i < this.state.reviews.length; i++) {
-        tempArray.push(this.state.reviews[i])
+        if (this.state.searchString.length > 1 && this.state.reviews[i].messageText.includes(this.state.searchString)){
+          tempArray.push(this.state.reviews[i])
+        }
+        if (this.state.searchString.length === 0){
+          tempArray.push(this.state.reviews[i])
+        }
         if (tempArray.length === 7) {
             resultArray.push(tempArray.splice(0,7 ))
         }
@@ -66,9 +80,10 @@ class App extends React.Component {
   }
 
   render() {
+    // console.log("This is Search String: ",this.state.searchString)
     return (
       <div>
-        <Review fulldata={this.state.fulldata} SortedMessageArray={this.SortMessageList()} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews}/>
+        <Review fulldata={this.state.fulldata} SortedMessageArray={this.SortMessageList()} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews} setSearch={this.setSearch}/>
       </div>
     )
   }

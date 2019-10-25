@@ -10,26 +10,12 @@ class Review extends React.Component {
         super(props)
         this.state = {
             currentMessageList: 0,
-            searchString: ""
         }
         this.calculateAverage = this.calculateAverage.bind(this)
         this.MessageListForward = this.MessageListForward.bind(this)
         this.MessageListBack = this.MessageListBack.bind(this)
         this.RenderDisplay = this.RenderDisplay.bind(this)
         this.MessageListSet = this.MessageListSet.bind(this)
-        this.setSearch = this.setSearch.bind(this)
-    }
-
-    setSearch(event){
-        event.preventDefault()
-        var temp = event.target
-        console.log("temp is: ", temp)
-        console.log("temp is: ", temp.value)
-        
-        this.setState({                      //Search isnt implemented yet
-            searchString: event.target.value
-        })
-        console.log(this.state.searchString)
     }
 
     calculateAverage(){
@@ -86,7 +72,7 @@ class Review extends React.Component {
                             <span className={styles.reviewDiv}></span>
                             <span className={styles.reviewCount}>{this.props.reviews.length}</span>
                             <span className={styles.reviewReview}>{" reviews"}</span>
-                            <span><SearchBar setSearch = {this.setSearch}/></span>
+                            <span><SearchBar setSearch = {this.props.setSearch}/></span>
                     </span>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ const ReviewDisplay = (props) => {
 
   return (
       <div>
-        {props.reviews.map((review) => <ReviewDisplayItem review={review} fulldata={props.fulldata}/> )}
+        {props.reviews.map((review) => <ReviewDisplayItem review={review} hostIcon={props.hostIcon} hostName={props.hostName}/> )}
       </div>
   )
 }

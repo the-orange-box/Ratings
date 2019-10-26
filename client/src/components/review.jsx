@@ -83,7 +83,7 @@ class Review extends React.Component {
                 <div className={styles.reviewSpacing} >
                 </div>
                 <div>
-                    <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} fulldata={this.props.fulldata} searchString={this.state.searchString}/>
+                    <ReviewDisplay reviews={this.RenderDisplay()} currentMessageList={this.state.currentMessageList} hostIcon={this.props.hostIcon} hostName={this.props.hostName} searchString={this.state.searchString}/>
                 </div>
                 <MessageListNav SortedMessageArray={this.props.SortedMessageArray} currentMessageList={this.state.currentMessageList} MessageListBack={this.MessageListBack} MessageListForward={this.MessageListForward} MessageListSet={this.MessageListSet}/>
             </div>

@@ -7,7 +7,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       searchString: '',
-      fulldata: [],
+      hostIcon: '',
+      hostName: '',
       reviews: [],
       ratingAverages: {
         Communication: 0.0,
@@ -33,7 +34,8 @@ class App extends React.Component {
 
   updateRender(update) {
     this.setState({
-      fulldata: update[0],     //Remember res stores the 'send' data in a data obj
+      hostName: update[0].hostName,
+      hostIcon: update[0].hostIcon,
       ratingAverages: update[0].ratingAverages,
       reviews: update[0].reviews
     })
@@ -59,14 +61,14 @@ class App extends React.Component {
     let resultArray=[]
     let tempArray=[]
     for(let i=0; i < this.state.reviews.length; i++) {
-        if (this.state.searchString.length > 1 && this.state.reviews[i].messageText.includes(this.state.searchString)){
+        if (this.state.searchString.length > 0 && this.state.reviews[i].messageText.includes(this.state.searchString)){
           tempArray.push(this.state.reviews[i])
         }
         if (this.state.searchString.length === 0){
           tempArray.push(this.state.reviews[i])
         }
         if (tempArray.length === 7) {
-            resultArray.push(tempArray.splice(0,7 ))
+            resultArray.push(tempArray.splice(0,7))
         }
     }
     resultArray.push(tempArray);
@@ -83,7 +85,7 @@ class App extends React.Component {
     // console.log("This is Search String: ",this.state.searchString)
     return (
       <div>
-        <Review fulldata={this.state.fulldata} SortedMessageArray={this.SortMessageList()} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews} setSearch={this.setSearch}/>
+        <Review hostIcon={this.state.hostIcon} hostName={this.state.hostName} SortedMessageArray={this.SortMessageList()} ratingAverages={this.state.ratingAverages} reviews={this.state.reviews} setSearch={this.setSearch}/>
       </div>
     )
   }

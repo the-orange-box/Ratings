@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './modules/ReviewDisplayItem.module.css'
+import styles from './modules/reviewDisplayItem.module.css'
 
 const ReviewDisplayItem = (props) => {
 function checkResponse(){
@@ -7,9 +7,9 @@ function checkResponse(){
     return (
       <div className={styles.messageResponse}>
       <span className={styles.boxTop}>
-      <img className={styles.iconimgResponse} src={props.fulldata.hostIcon}></img>
+      <img className={styles.iconimgResponse} src={props.hostIcon}></img>
       <span className={styles.messageUsernameResponse}>
-        Response from {props.fulldata.hostName}:
+        Response from {props.hostName}:
         <div className={styles.messageTextResponse}>{props.review.responseText}</div>
       </span>
       </span>

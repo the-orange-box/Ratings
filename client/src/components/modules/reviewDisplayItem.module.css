@@ -105,14 +105,20 @@
 .messageSeparator{
   margin-top: 24px;
   margin-bottom: 24px;
+  height: 1px !important;
+  border: solid !important;
+  border-top: 1px !important;
+  border-right:0px !important;
+  border-left: 0px !important;
+  border-width: 1px !important;
+  border-color: lightgray !important;
 }
 
 .messageHr{
   color: #FFFFFF;
   background-color: #FFFFFF;
   height: 0.0px;
-  border-color : #FEFEFE !important;
-  border-width: 1px !important;
-  border: 1px , 1px !important;
+  border-color : #FFFFFF;
+  border: 0;
 }
  

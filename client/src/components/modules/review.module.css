@@ -10,25 +10,34 @@
 .separatorBarTop {
     margin-top: 24px;
     margin-bottom: 24px;
-    border-color : #FEFEFE !important;
+    height: 1px !important;
+    border: solid !important;
+    border-top: 1px !important;
+    border-right:0px !important;
+    border-left: 0px !important;
     border-width: 1px !important;
-  }
+    border-color: lightgray !important;
+}
   
 .separatorBarMid {
     margin-top: 17px; 
     margin-bottom: 15px;
-    border-color : #FEFEFE !important;
+    height: 1px !important;
+    border: solid !important;
+    border-top: 1px !important;
+    border-right:0px !important;
+    border-left: 0px !important;
     border-width: 1px !important;
-    border: 1px , 1px !important;
-  }
+    border-color: lightgray !important;}
   
 .hrStyle {
     color:  #FFFFFF;
     background-color: #FFFFFF;
+    height: 0px;
+    border-color: #F1F1F1;
+    border-width: 1px;
     width: 648px;
-    border-color : #FEFEFE !important;
-    border-width: 1px !important;
-    border: 1px , 1px !important;
+    border: 0;
   }
 /* .test {
     color: '#484848';

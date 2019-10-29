@@ -11,7 +11,7 @@ var checkResponse = (bool) => {
 
 var generateReviews = () => {
   var reviewArray =[]
-  for (var i = 0; i < faker.random.number({min:70, max:120}); i++){
+  for (var i = 0; i < faker.random.number({min:80, max:120}); i++){
     let currentDate = faker.date.month();
     let response = faker.random.boolean();
     reviewArray.push({

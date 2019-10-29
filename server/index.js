@@ -2,12 +2,21 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+var compression = require('compression')
 var Ratings = require('../seed.js');
 mongoose.connect('mongodb://localhost:27017/ratings',{ useNewUrlParser: true, useUnifiedTopology: true });
 
 const fake = require("./fakeData.js")
 const PORT = 3002;
 const app = express();
+app.use(compression({ filter: shouldCompress }))
+
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    return false
+  }
+  return compression.filter(req, res)
+}
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");

@@ -10,20 +10,26 @@
 .separatorBarTop {
     margin-top: 24px;
     margin-bottom: 24px;
-}
+    border-color : #FEFEFE !important;
+    border-width: 1px !important;
+  }
   
 .separatorBarMid {
     margin-top: 17px; 
     margin-bottom: 15px;
-}
+    border-color : #FEFEFE !important;
+    border-width: 1px !important;
+    border: 1px , 1px !important;
+  }
   
 .hrStyle {
     color:  #FFFFFF;
     background-color: #FFFFFF;
-    height: .0;
-    border-color : #FFFFFF;
     width: 648px;
-}
+    border-color : #FEFEFE !important;
+    border-width: 1px !important;
+    border: 1px , 1px !important;
+  }
 /* .test {
     color: '#484848';
     fontSize: 24;

@@ -111,6 +111,8 @@
   color: #FFFFFF;
   background-color: #FFFFFF;
   height: 0.0px;
-  border-color : #FFFFFF;
+  border-color : #FEFEFE !important;
+  border-width: 1px !important;
+  border: 1px , 1px !important;
 }
  

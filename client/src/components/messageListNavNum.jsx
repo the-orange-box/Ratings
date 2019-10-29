@@ -26,7 +26,9 @@ class MessageListNavNum extends React.Component {
     }
     {this.props.SortedMessageArray.map((item,key) =>
       key === this.props.currentMessageList-1 && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
-      <span><li><button className={styles.messagePeriods}>...</button></li>
+      key === 1 ?
+<li><button className={styles.messageButton} value={2} onClick={this.props.MessageListSet}>{2}</button></li>      
+      :<span><li><button className={styles.messagePeriods}>...</button></li>
       <li><button className={styles.messageButton} value={key} onClick={this.props.MessageListSet}>{key + 1}</button></li> </span>
       : key === this.props.currentMessageList && key !== 0 && key !== this.props.SortedMessageArray.length-1 ?
       key === this.props.currentMessageList ?
